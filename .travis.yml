@@ -9,5 +9,9 @@ services:
 env:
   - DOCKER_COMPOSE_VERSION=1.23.2
 
+script :
+  - docker build ./ -t springbootapp
+  - docker-compose up --exit-code-from springbootapp
 
 
+ 
